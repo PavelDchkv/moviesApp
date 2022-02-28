@@ -1,0 +1,29 @@
+.pagination-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ant-pagination-next .ant-pagination-item-link, .ant-pagination-prev .ant-pagination-item-link {
+    border: none;
+}
+
+.ant-pagination-item {
+    border: none;
+}
+
+.ant-pagination-item-active {
+    background-color: #1890ff;
+    border-radius: 4px;
+}
+.ant-pagination-item-active:focus-visible a, .ant-pagination-item-active:hover a {
+    color: white;
+}
+
+.ant-pagination-item-active a {
+    color: white;
+}
+
+.ant-pagination {
+    font-size: 12px;
+}

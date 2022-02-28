@@ -1,0 +1,163 @@
+.movie {
+    margin: 0 4px 34px;
+    width: 454px;
+    height: 281px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    position: relative;
+}
+
+.movie__poster {
+    width: 183px;
+    height: 100%;
+}
+
+.movie__main {
+    flex-grow: 1;
+    padding: 12px 20px 0;
+}
+
+.movie__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 0;
+    max-width: 200px;
+}
+
+.movie__release-date {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    color: #827E7E;
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+
+.movie__genres-list {
+    margin-top: 7px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 20px;
+}
+
+.movie__genre {
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    list-style-type: none;
+    background: #FAFAFA;
+    border: 1px solid #D9D9D9;
+    border-radius: 2px;
+    /*width: 46px;*/
+    padding: 0 4px;
+    height: 20px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(0, 0, 0, 0.65);
+
+    margin-right: 7px;
+}
+
+.movie__overview {
+    width: 228px;
+    max-height: 129px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    color: #000000;
+    margin-bottom: 0;
+    margin-top: 4px;
+
+}
+
+.movie__rating {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 12px;
+    right: 9px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #000000;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie__rating--D-grade {
+    border-color: #E90000;
+}
+
+.movie__rating--C-grade {
+    border-color: #E97E00;
+}
+
+.movie__rating--B-grade {
+    border-color: #E9D100;
+}
+
+.movie__rating--A-grade {
+    border-color: #66E900;
+}
+
+.ant-rate {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+}
+
+.ant-rate-star:not(:last-child) {
+    margin-right: 6.5px;
+}
+
+
+@media(max-width: 420px) {
+    .movie {
+        width: 387px;
+        height: 245px;
+        margin: 0 4px 20px;
+        position: relative;
+    }
+
+    .movie__poster {
+        width: 60px;
+        height: 91px;
+        float: left;
+        margin-top: 6px;
+        margin-left: 10px;
+    }
+
+    .movie__main {
+        padding: 4px 14px 0;
+    }
+
+    .movie__overview {
+        width: auto;
+        max-height: 129px;
+        position: absolute;
+        left: 10px;
+        margin-bottom: 0;
+        margin-top: 15px;
+        margin-right: 25px;
+
+    }
+
+    .movie__title {
+        max-width: 240px;
+        margin-top: 6px;
+    }
+}
