@@ -99,7 +99,7 @@ export default class App extends Component {
     this.movieService
       .getRatedMovies(this.state.guestSessionId, page)
       .then((res) => {
-        this.onMoviesLoaded(res, 'ratedMoviesArr');
+        this.onMoviesLoaded(res);
       })
       .catch((err) => this.onError(err));
   };
@@ -108,12 +108,12 @@ export default class App extends Component {
     this.movieService
       .getMovies(searchLine, page)
       .then((res) => {
-        this.onMoviesLoaded(res, 'moviesArr');
+        this.onMoviesLoaded(res);
       })
       .catch((err) => this.onError(err));
   };
 
-  onMoviesLoaded(moviesObj, type) {
+  onMoviesLoaded(moviesObj) {
     const { results: movies, total_pages: totalPages } = moviesObj;
     if (movies.length === 0) {
       this.setState({
@@ -124,7 +124,7 @@ export default class App extends Component {
       return;
     }
     this.setState({
-      [type]: movies,
+      moviesArr: movies,
       totalPages: totalPages,
       loading: false,
       error: false,
@@ -146,14 +146,14 @@ export default class App extends Component {
   };
 
   render() {
-    const { moviesArr, ratedMoviesArr, loading, error, totalPages, currentPage, isEmpty, tab, genres } = this.state;
+    const { moviesArr, loading, error, totalPages, currentPage, isEmpty, genres } = this.state;
     const { TabPane } = Tabs;
     const isPaginationNecessary = !error && !loading && !isEmpty;
 
     const movies = (
       <React.Fragment>
         <MoviesList
-          moviesArr={tab === 'search' ? moviesArr : ratedMoviesArr}
+          moviesArr={moviesArr}
           loading={loading}
           error={error}
           isEmpty={isEmpty}

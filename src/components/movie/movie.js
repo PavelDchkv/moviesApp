@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 import { Consumer } from '../jenres-context';
 import './movie.css';
+import imageCap from '../../img/image-cap.png';
 
 export default class Movie extends Component {
   static defaultProps = {
@@ -62,7 +63,7 @@ export default class Movie extends Component {
 
     const maxSymbols = title.length > 40 ? 75 : 105;
     const shortText = this.getShortText(overview, maxSymbols);
-    const urlImg = `https://image.tmdb.org/t/p/w500${poster_path}`;
+    const urlImg = poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : imageCap;
 
     let ratingClassName = 'movie__rating';
     if (vote_average <= 3) {

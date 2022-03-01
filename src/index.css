@@ -1,29 +1,30 @@
 @font-face {
-    font-family: Inter;
-    src: local('Inter'),
-    url('./fonts/Inter-Medium.ttf') format('truetype');
-    font-weight: normal;
+  font-family: Inter;
+  src: local('Inter'), url('./fonts/Inter-Medium.ttf') format('truetype');
+  font-weight: normal;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-*, *::before, *::after {
-    box-sizing: inherit;
-    padding: 0;
-    margin: 0;
-    border: 0;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 body {
-    background-color: #E5E5E5;
+  background-color: #e5e5e5;
 
-    font-family: 'Inter';
-    font-size: 14px;
-    color: #000000;
+  font-family: 'Inter';
+  font-size: 14px;
+  color: #000000;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }

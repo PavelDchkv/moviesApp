@@ -1,29 +1,32 @@
 .movies-app {
-    min-height: 100vh;
-    background-color: #FFFFFF;
-    width: 1010px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    padding:0 34px 30px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  width: 1010px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  padding: 0 34px 30px;
 }
-.ant-tabs-bottom>.ant-tabs-nav:before, .ant-tabs-bottom>div>.ant-tabs-nav:before, .ant-tabs-top>.ant-tabs-nav:before, .ant-tabs-top>div>.ant-tabs-nav:before {
-    border: none;
+.ant-tabs-bottom > .ant-tabs-nav:before,
+.ant-tabs-bottom > div > .ant-tabs-nav:before,
+.ant-tabs-top > .ant-tabs-nav:before,
+.ant-tabs-top > div > .ant-tabs-nav:before {
+  border: none;
 }
 
 .ant-tabs-nav-list {
-    border-bottom: 1px solid #f0f0f0;;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .ant-tabs-tab {
-    font-size: 14px;
-    line-height: 22px;
-    color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.65);
 }
 
-@media(max-width: 420px) {
-    .movies-app {
-        width: 420px;
-        padding:0 12px 15px;
-    }
+@media (max-width: 420px) {
+  .movies-app {
+    width: 420px;
+    padding: 0 12px 15px;
+  }
 }
