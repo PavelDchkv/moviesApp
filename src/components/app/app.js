@@ -12,7 +12,6 @@ export default class App extends Component {
   movieService = new MovieDBService();
   state = {
     moviesArr: [],
-    ratedMoviesArr: [],
     totalPages: 1,
     searchLine: '',
     currentPage: 1,
